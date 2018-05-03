@@ -38,3 +38,7 @@ resource "aws_eip" "tf_playground_instance_eip" {
     Name = "tf_playground_instance_eip"
   }
 }
+
+output "aws_eip_tf_playground_instance_eip" {
+  value = "${aws_eip.tf_playground_instance_eip.id}"
+}
