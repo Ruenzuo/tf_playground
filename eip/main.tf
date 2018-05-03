@@ -29,3 +29,8 @@ resource "aws_instance" "tf_playground_instance" {
 output "aws_instance_tf_playground_instance_id" {
   value = "${aws_instance.tf_playground_instance.id}"
 }
+
+resource "aws_eip" "tf_playground_instance_eip" {
+  instance = "${aws_instance.tf_playground_instance.id}"
+  vpc      = true
+}
