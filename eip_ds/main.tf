@@ -4,8 +4,9 @@ provider "aws" {
 }
 
 data "aws_eip" "tf_playground_instance_eip" {
-  eip_tags {
-    Name = "tf_playground_instance_eip"
+  filter {
+    name   = "tag:Name"
+    values = ["tf_playground_instance_eip"]
   }
 }
 
