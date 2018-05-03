@@ -1,9 +1,12 @@
 provider "aws" {
-  region = "us-west-2"
+  region  = "us-west-2"
+  version = "1.17.1"
 }
 
 data "aws_eip" "tf_playground_instance_eip" {
-  id = "eipalloc-0a88322d949785907"
+  eip_tags {
+    Name = "tf_playground_instance_eip"
+  }
 }
 
 output "aws_eip_tf_playground_instance_eip" {
