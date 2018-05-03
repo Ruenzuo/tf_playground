@@ -1,0 +1,35 @@
+# Created by https://www.gitignore.io/api/terraform,visualstudiocode
+
+### Terraform ###
+# Compiled files
+*.tfstate
+*.tfstate.*
+
+# Module directory
+.terraform/
+
+# .tfvars files
+*.tfvars
+
+### Packer ###
+# Cache objects
+packer_cache/
+output-*/
+
+# For built boxes
+*.box
+
+# For build artifacts
+*.vdi
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+
+
+# End of https://www.gitignore.io/api/terraform,visualstudiocode
+
