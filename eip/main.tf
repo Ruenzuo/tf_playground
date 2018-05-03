@@ -33,4 +33,8 @@ output "aws_instance_tf_playground_instance_id" {
 resource "aws_eip" "tf_playground_instance_eip" {
   instance = "${aws_instance.tf_playground_instance.id}"
   vpc      = true
+
+  tags {
+    Name = "tf_playground_instance_eip"
+  }
 }
